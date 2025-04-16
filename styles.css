@@ -1,0 +1,665 @@
+/* styles.css */
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ajustes de tamaño específicos */
+.logo-bar img {
+    height: 60px;
+}
+
+.user-options img {
+    height: 24px;
+    width: 24px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero-img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    pointer-events: none; /* opcional */
+}
+
+.hero-options {
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    gap: 20px;
+    margin: 50px auto;
+    flex-wrap: wrap;
+}
+
+.hero-options .option {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 20px 40px; /* más grande */
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 200px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-options .option img {
+    height: 60px;
+    width: 70px;
+    margin: 0 auto;
+}
+
+.carousel-item img {
+    align-content: center;
+    object-fit: cover;
+
+}
+
+.icon-links img {
+    height: 60px;
+}
+
+.iniciativa img {
+    height: 160px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+.noticia img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.documentos img,
+.instituciones img,
+.footer-logo img {
+    height: auto;
+    max-width: 100%;
+}
+
+/* Enlaces y listas */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.top-bar {
+    background-color: #e40000;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-top {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-top li a {
+    color: white;
+    font-weight: bold;
+}
+
+.nav-top li a.active {
+    background: white;
+    color: red;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.user-options a {
+    margin-right: 10px;
+    color: white;
+}
+
+.logo-bar {
+    padding: 15px 20px;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-options {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-options .option {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.hero-options .option.active {
+    background: white;
+    color: black;
+}
+
+.hero-links {
+    display: flex;
+    justify-content: center;  /* Centra los enlaces horizontalmente */
+    gap: 20px;  /* Espacio entre los enlaces */
+    flex-wrap: wrap;  /* Permite que los elementos se ajusten a la siguiente línea si es necesario */
+    margin-top: 30px;  /* Espacio arriba para separar de los elementos anteriores */
+}
+
+.hero-links a {
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;  /* Ajusta el padding para el tamaño del cuadrado */
+    margin: 5px;
+    border: 2px solid #ccc; /* Borde gris */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;  /* Quitar subrayado por defecto */
+    transition: all 0.3s ease; /* Efecto de transición */
+}
+
+.hero-links a:hover {
+    background-color: #f4f4f4; /* Color de fondo al pasar el cursor */
+    border-color: #e40000; /* Cambio de color de borde al hacer hover */
+    color: #e40000; /* Cambio de color de texto */
+}
+
+
+.carousel {
+    background: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Alinea el contenido verticalmente */
+    gap: 30px; /* Espacio entre la imagen y el texto */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+.carousel-img {
+    width: 50%; /* Establece el tamaño de la imagen al 50% */
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen se ajuste al espacio sin distorsionarse */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+}
+
+.carousel-caption {
+    flex: 1; /* Deja que el contenedor de texto ocupe el espacio restante */
+    text-align: left; /* Alinea el texto a la izquierda */
+    max-width: 500px; /* Establece un máximo ancho para que el texto no se haga demasiado largo */
+}
+
+.carousel-caption h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.carousel-caption p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #002f6c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background-color: #e40000;
+}
+
+.accesos-rapidos {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centra los elementos dentro de la sección */
+    justify-content: center;
+}
+
+.accesos-rapidos h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.icon-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    max-width: 960px;  /* Limita el ancho máximo de los iconos */
+    width: 100%;
+}
+
+.icon-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Suaviza la transición del tamaño */
+}
+
+.icon-item:hover {
+    transform: scale(1.2); /* Aumenta el tamaño al 120% cuando se pasa el mouse */
+}
+
+.icon-item img {
+    width: 80px; /* Ajusta el tamaño de las imágenes */
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.icon-item p {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+/* Estadísticas */
+.estadisticas {
+    padding: 40px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stat {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.stat span {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Empleo */
+.busca-empleo {
+    padding: 40px 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+
+.iniciativas {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.iniciativa {
+    width: 250px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.iniciativa h3 {
+    margin: 10px 0;
+}
+
+.testimonios {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.testimonios h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonio {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonio img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.testimonio h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.testimonio p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn-testimonio {
+    padding: 10px 20px;
+    background-color: #007bff; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-testimonio:hover {
+    background-color: #0056b3;
+}
+.bloque-informativo {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    gap: 20px;
+    background-color: #f1f1f1;
+}
+
+.bloque-noticias {
+    flex: 1;
+    min-width: 300px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.bloque-noticias h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.noticia {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.noticia img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.noticia-texto h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.noticia-texto p {
+    font-size: 14px;
+    color: #444;
+}
+
+.bloque-info {
+    display: flex;
+    flex: 1;
+    min-width: 300px;
+    gap: 20px;
+}
+
+.generales {
+    flex: 1;
+    background-color: #dcdcdc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.generales h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.generales ul {
+    list-style: none;
+    padding: 0;
+}
+
+.generales li {
+    margin-bottom: 10px;
+}
+
+.generales a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.info-extra {
+    flex: 1;
+    background-color: #cc0000;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.info-extra h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.info-extra p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-sence {
+    background-color: #000000;
+    color: #ffffff;
+    padding-top: 20px;
+    font-family: sans-serif;
+  }
+  
+  .footer-banner {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  
+  .footer-banner img {
+    max-width: 700px;
+    width: 100%;
+    height: auto;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 40px;
+    border-top: 1px solid #333;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+  }
+  
+  .footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li a {
+    color: #cccccc;
+    text-decoration: none;
+  }
+  
+  .footer-column ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 15px 10px;
+    background-color: #111111;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+  }
+  
+  .info-contacto {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #005baa; /* azul institucional */
+    color: #ffffff; /* texto blanco para contraste */
+    padding: 20px 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .info-columna {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 45%;
+  }
+  
+  .info-columna.izquierda {
+    justify-content: flex-start;
+  }
+  
+  .info-columna.derecha {
+    justify-content: flex-end;
+    text-align: right;
+  }
+  
+  .info-columna img {
+    width: 60px;
+    height: auto;
+    filter: brightness(0) invert(1); /* para que las imágenes negras se vean blancas en fondo azul */
+  }
+  
+  .info-columna .texto p {
+    margin: 4px 0;
+  }
+  
+  .buzon-link {
+    display: inline-block;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  
